@@ -1,10 +1,12 @@
 //Wynik gry
 
-var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
+var argMoveId 
+const argPlayerMove 
+const argComputerMove 
+const computerMove 
+const playerMove 
+const playerInput
 
-/**
- * Wynik gry 1/2...
- */
 function getMoveName(argMoveId) {
   console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
   if (argMoveId == 1) {
@@ -16,9 +18,6 @@ function getMoveName(argMoveId) {
   } 
 }
 
-/**
- * Wynik gry 2/2...
- */
 function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
@@ -37,7 +36,7 @@ function displayResult(argPlayerMove, argComputerMove) {
 }
 //Guziki
 
-var argButtonName, buttonTest, buttonKamień, buttonNożyce, buttonPapier;
+
 
 function buttonClicked(argButtonName) {
   clearMessages();
@@ -45,14 +44,12 @@ function buttonClicked(argButtonName) {
 
   //Wynik gry
 
-var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
-
-playerMove = argButtonName;
+let playerMove = argButtonName;
 console.log('ruch gracza to: ' + playerMove);
-randomNumber = Math.floor(Math.random() * 3 + 1);
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
-computerMove = getMoveName(randomNumber);
+let computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
 
